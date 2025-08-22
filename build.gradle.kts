@@ -29,3 +29,15 @@ dependencies {
     compileOnly("org.spigotmc:spigot-api:1.21.8-R0.1-SNAPSHOT")
     testImplementation("junit:junit:4.13.1")
 }
+
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            from(components["java"])
+
+            groupId = "com.github.Atilt"
+            artifactId = "VaultCordAPI"
+            version = "1.0.3"
+        }
+    }
+}
